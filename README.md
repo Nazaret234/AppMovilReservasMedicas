@@ -81,17 +81,20 @@ git branch -d hotfix/1.2.1
 ## 🔹 Comandos Útiles
 
 ```bash
-# Sincronizar con remoto
+# Sincronizar con remoto antes de crear nueva rama
 git fetch origin
 git checkout develop
 git pull origin develop
 
-# Limpiar ramas locales ya mergeadas
-git branch --merged | grep -v "\*\|main\|develop" | xargs -n 1 git branch -d
+# Crear PR desde terminal (GitHub CLI)
+gh pr create --title "Feature: Nueva funcionalidad" --body "Descripción detallada"
 
-# Ver historial de tags
+# Ver PRs pendientes
+gh pr list
+
+# Mergear PR con squash (para features)
+gh pr merge --squash --delete-branch
+
+# Ver historial de releases
 git tag --sort=-version:refname
-
-# Push de tags
-git push origin --tags
 ```
