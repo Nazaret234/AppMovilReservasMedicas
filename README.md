@@ -15,3 +15,11 @@
   ```bash
   git tag -a v1.0.0 -m "Versión inicial"
   git push origin v1.0.0
+
+  # 📖 Estrategia de Versionamiento y Flujo de Ramas
+
+## 📌 Estrategia de Versionamiento
+
+Este proyecto sigue **[Semantic Versioning 2.0.0](https://semver.org/lang/es/)** con el formato:
+
+
